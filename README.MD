@@ -40,6 +40,8 @@
 5. Install Git SCM
    ```shell
    yum install -y  git
+   git config --global user.name "Your name"
+   git config --global user.email "your email"
    ```
 6. install maven 
     * download maven 
