@@ -1,2 +1,5 @@
 .idea
 target
+/hello-karaf/hello-karaf.iml
+/hello-karaf/nbactions.xml
+/hello-karaf/target/

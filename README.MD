@@ -79,4 +79,20 @@
     bin/fuse
     ```
     wait for Karaf shell ready
-8.  
+8.  Hello Karaf 
+    * create sample project 
+    ```shell
+    mvn -DarchetypeGroupId=org.codehaus.mojo.archetypes -DarchetypeArtifactId=osgi-archetype -DarchetypeVersion=1.4 -DarchetypeRepository=http://repo.maven.apache.org/maven2 -DgroupId=th.co.geniustree.training -DartifactId=hello-karaf -Dversion=1.0.0-SNAPSHOT -Dpackage=th.co.geniustree.training.hello.karaf  -Darchetype.interactive=false --batch-mode archetype:generate
+    ```
+    * install to karaf (type this command in karaf console)
+    ```shell
+    install mvn:th.co.geniustree.training.hello.karaf/hello-karaf/1.0.0-SNAPSHOT
+    ```
+    * list bundle already install
+    ```shell
+    list
+    ```
+    * uninstall bundle (*ID is id of your bundle)
+    ```shell
+    uninstall *ID
+    ```
