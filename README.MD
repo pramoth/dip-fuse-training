@@ -100,3 +100,16 @@
     ```
     mvn archetype:generate -DarchetypeGroupId=io.fabric8.archetypes -DarchetypeArtifactId=karaf-soap-archetype -DarchetypeVersion=1.2.0.redhat-630187 -DgroupId=org.fusesource.example -DartifactId=cxf-basic -Dversion=1.0-SNAPSHOT -Dfabric8-profile=cxf-basic-profile
     ``` 
+10. create fuse fabric
+    ```
+    fabric:create --new-user admin --new-user-password adminadmin --new-user-role Administrator --zookeeper-password adminadmin --resolver manualip --manual-ip 127.0.0.1 --wait-for-provisioning
+    fabric:container-create-child root child1
+    shell:watch container-list
+    fabric:container-create-child root child2
+    shell:watch container-list
+    ```
+    * view log on child container
+    ```
+    container-connect child1
+    log:tail
+    ```
